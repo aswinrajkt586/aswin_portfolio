@@ -109,12 +109,14 @@ header{
 	font-weight: 100;
 	font-size: 10em;
 	margin: 0;
+	animation: title-animation 1.5s;
 }
 .subheadline {
 	font-family: 'Titillium Web', sans-serif;
 	font-weight: 200;
 	font-size: 3em;
 	margin: 0;
+	animation: sub-title-animation 3s;
 }
 
 .scrollDown {
@@ -430,6 +432,10 @@ header{
 .mapWrap {
     position: relative;
     min-height: 600px;
+	background: url(../images/bg-small.jpg) ;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: 50% -50px;
 }
 #googleMap {
     position: absolute !important;
@@ -438,7 +444,6 @@ header{
     height: 100%;
 }
 #contact-area {
-    background: rgba(0, 0, 0, 0.7);
     width: 100%;
     position: relative;
     padding: 80px 0px 60px 0px;
@@ -736,5 +741,25 @@ footer {
 	.scrollDown {
 	    top: 70%;
 	    left: 44%;
+	}
+}
+
+@keyframes title-animation {
+	0%{
+		transform: translateX(-300px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes sub-title-animation {
+	0%{
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }
